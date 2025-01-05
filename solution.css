@@ -1,0 +1,14 @@
+This solution involves applying the styles directly to the pseudo-element instead of relying on `@apply`:
+```css
+/* solution.css */
+.my-element {
+  /* ... other styles ... */
+}
+
+.my-element::before {
+  background-color: blue;
+  padding: 2px;
+  content: "Before";
+}
+```
+This method correctly applies styles to the `::before` pseudo-element. Alternatively, consider refactoring the CSS to use only Tailwind utility classes directly, avoiding the `@apply` directive altogether for a more maintainable and predictable approach.
