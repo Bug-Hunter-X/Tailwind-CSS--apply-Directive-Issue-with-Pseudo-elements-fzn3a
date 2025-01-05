@@ -1,0 +1,10 @@
+This bug occurs when using Tailwind CSS's `@apply` directive with a class that contains a pseudo-element selector (e.g., `::before`, `::after`).  The `@apply` directive might not correctly apply the styles to the pseudo-element, resulting in unexpected visual output.
+
+Example:
+```css
+/* styles.css */
+.my-element::before {
+  @apply bg-blue-500 p-2;
+}
+```
+This might not apply the `bg-blue-500` and `p-2` classes to the `::before` pseudo-element.
